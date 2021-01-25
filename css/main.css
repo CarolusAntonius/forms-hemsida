@@ -1,0 +1,213 @@
+@font-face {
+  font-family: font;
+  src: url("../font.ttf");
+  font-display: swap;
+}
+
+* {
+  font-family: font;
+  margin: 0px;
+  color: #c4ae08;
+}
+
+h1 {
+  font-size: max(6vw, 60px);
+  text-align: center;
+  -webkit-text-stroke: 1px #000000;
+}
+
+h2 {
+  font-size: max(2.2vw, 44px);
+  text-align: center;
+  -webkit-text-stroke: 1px #000000;
+}
+
+h3 {
+  font-size: max(3vw, 30px);
+  text-align: center;
+  -webkit-text-stroke: 1px #000000;
+}
+
+p {
+  font-size: max(2vw, 30px);
+  text-align: center;
+  font-family: serif;
+  -webkit-text-stroke: 0.5px #000000;
+}
+
+a {
+  font-size: max(3vw, 10px);
+  text-decoration: none;
+  -webkit-text-stroke: 1px #000000;
+}
+
+a:hover {
+  color: grey;
+  transition: 0.2s ease-in-out;
+}
+
+#trupperdel img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(196, 174, 8, 0.3);
+}
+
+main {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  min-height: 100vh;
+  background-image: url("../bilder/slaget-vid-narva-3-svartvit.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  padding: 1.5vw;
+  border: solid#c4ae08 5px;
+  background-image: url("../bilder/konungens-likfard-2.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  padding: 2em;
+  background-color: rgb(1, 16, 48);
+  border: solid#c4ae08 5px;
+  background-image: url("../bilder/konungens-likfard-2.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#indexdel {
+  min-width: 250px;
+  width: 40vw;
+  border: solid#c4ae08 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  padding: 1.5em;
+  background-image: url("../bilder/sten-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#indexdel p {
+  padding-top: 1.5vw;
+}
+
+#stor-meny {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-width: 100%;
+  max-height: 50px;
+  text-align: center;
+}
+
+#lankar {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#stor-meny #logga-1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+#stor-meny #logga-2 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+
+#slagfaltdel,
+#trupperdel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2vw;
+  margin: 1vw;
+  font-size: max(1.5vw, 20px);
+}
+
+.slagfalt-container,
+.trupper-container {
+  min-width: 150px;
+  border: solid#c4ae08 5px;
+  padding: 1.5em;
+  background-image: url("../bilder/sten-2.jpg");
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.trupper-container img {
+  width: 80%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.aside-area {
+  position: fixed;
+  top: 1vw;
+  left: 1vw;
+  font-size: 2rem;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  transition: 600ms ease-in-out;
+  background-image: url("../bilder/sten-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  height: 100%;
+}
+
+aside a {
+  font-size: 3rem;
+  transition: filter 600ms ease-out;
+}
+
+.aside-toggle {
+  display: none;
+}
+
+@media (max-width: 881px) {
+  #stor-meny {
+    display: none !important;
+  }
+  #slagfaltdel,
+  #trupperdel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 881px) {
+  .aside-area {
+    display: none !important;
+  }
+}
+
+.aside-toggle:checked + aside {
+  left: 0;
+}
