@@ -12,137 +12,168 @@
     <header>
       <h1>Greatest battles of Carolus XII</h1>
       <nav>
-        <div id="stor-meny">
-          <div id="logga-1">
-            <a href="https://store.steampowered.com/" target="_blank">
-              <img src="bilder/logga-spel.png" alt="Företgslogga" />
-            </a>
-          </div>
-          <div id="logga-2">
-            <a href="https://store.steampowered.com/" target="_blank">
-              <img
-                src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png?t=962016"
-                alt="Steamlogga"
-              />
-            </a>
-          </div>
-
-          <div id="lankar">
-            <a href="index.html"> Hem </a>
-            <a href="beskrivning.html"> Beskrivning </a>
-            <a href="slagfalt.html"> Slagfält </a>
-            <a href="trupper.html"> Trupper </a>
-            <a href="kontakt.html"> Kontakt </a>
-          </div>
-        </div>
-
-        <div class="aside-area">
-          ☰
-          <input class="aside-toggle" type="checkbox" />
-          <label class="aside-area">
-            ☰
-            <input class="aside-toggle" type="checkbox" />
-            <aside>
-              <ul>
-                <li>
-                  <a href="index.html">Hem</a>
-                </li>
-                <li>
-                  <a href="beskrivning.html">Beskrivning</a>
-                </li>
-                <li>
-                  <a href="slagfalt.html">Slagfält</a>
-                </li>
-                <li>
-                  <a href="trupper.html">Trupper</a>
-                </li>
-                <li>
-                  <a href="kontakt.html">Kontakt</a>
-                </li>
-              </ul>
-            </aside>
-          </label>
-        </div>
+        <ul>
+          <li>
+            <input
+              id="om-lank"
+              type="radio"
+              name="meny"
+              value="om"
+              checked
+              onchange="update()"
+            />
+            <label for="om-lank">Om</label>
+          </li>
+          <li>
+            <input
+              id="quiz-lank"
+              type="radio"
+              name="meny"
+              value="quiz"
+              checked
+              onchange="update()"
+            />
+            <label for="quiz-lank">Quiz</label>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
-      <article id="trupperdel">
-        <div class="trupper-container" id="sv-infanteri">
-          <h3>Svenskt infanteri</h3>
-          <a href="bilder/modeller/sv/infanteri.jpg" target="_blank">
-            <img
-              src="bilder/modeller/sv/infanteri.jpg"
-              alt="Svenskt infanteri"
-            />
-          </a>
-        </div>
+      <h1>Quiz i Stora Nordiska Kriget</h1>
 
-        <div class="trupper-container" id="sv-pikenerare">
-          <h3>Svenska pikenerare</h3>
-          <a href="bilder/modeller/sv/pikenerare.jpg" target="_blank">
-            <img
-              src="bilder/modeller/sv/pikenerare.jpg"
-              alt="Svenska pikenerare"
-            />
-          </a>
-        </div>
-
-        <div class="trupper-container" id="sv-grenadjarer">
-          <h3>Svenska grenadjärer</h3>
-          <a href="bilder/modeller/sv/grenadjarer.jpg" target="_blank">
-            <img
-              src="bilder/modeller/sv/grenadjarer.jpg"
-              alt="Svenska grenadjärer"
-            />
-          </a>
-        </div>
-
-        <div class="trupper-container" id="sv-kavalleri">
-          <h3>Svenskt kavalleri</h3>
-          <a href="bilder/modeller/sv/kavalleri.jpg" target="_blank">
-            <img
-              src="bilder/modeller/sv/kavalleri.jpg"
-              alt="Svenskt kavalleri"
-            />
-          </a>
-        </div>
-
-        <div class="trupper-container" id="ry-infanteri">
-          <h3>Ryskt infanteri</h3>
-          <a href="bilder/modeller/ry/infanteri.jpg" target="_blank">
-            <img src="bilder/modeller/ry/infanteri.jpg" alt="Ryskt infanteri" />
-          </a>
-        </div>
-
-        <div class="trupper-container" id="ry-pikenerare">
-          <h3>Ryska pikenerare</h3>
-          <a href="bilder/modeller/ry/pikenerare.jpg" target="_blank">
-            <img
-              src="bilder/modeller/ry/pikenerare.jpg"
-              alt="Ryska pikenerare"
-            />
-          </a>
-        </div>
-
-        <div class="trupper-container" id="ry-grenadjarer">
-          <h3>Ryska grenadjärer</h3>
-          <a href="bilder/modeller/ry/grenadjarer.jpg" target="_blank">
-            <img
-              src="bilder/modeller/ry/grenadjarer.jpg"
-              alt="Ryska grenadjärer"
-            />
-          </a>
-        </div>
-
-        <div class="trupper-container" id="ry-kavalleri">
-          <h3>Ryskt kavalleri</h3>
-          <a href="bilder/modeller/ry/kavalleri.jpg" target="_blank">
-            <img src="bilder/modeller/ry/kavalleri.jpg" alt="Ryskt kavalleri" />
-          </a>
-        </div>
+      <article id="om">
+        <p>ABOUT</p>
       </article>
-    </main>
 
+      <form class="questions">
+        <article id="quiz">
+          <p>QUIZ</p>
+          <div id="changeQuestion-button">
+            <button type="button" onclick="changeQuestion()">
+              Nästa fråga!
+            </button>
+          </div>
+          <div id="submitQuiz-button" class="invisible">
+            <button type="button" onclick="submitQuiz()">Rätta!</button>
+          </div>
+          <div id="fraga1">
+            <p>
+              Stormningen av Veprik resulterade i en svensk seger. De svenska
+              styrkorna var ca 3 000 man medan de ryska styrkorna var ca 1500
+              man. Samtliga ryska trupper dödades eller blev tillfångatagna. Hur
+              många trupper förlorade Sverige?
+            </p>
+            <label>
+              <input
+                data-question
+                name="question4"
+                type="radio"
+                value="0"
+                checked
+              />1000-1600 man
+            </label>
+            <label>
+              <input
+                data-question
+                name="question4"
+                type="radio"
+                value="0"
+              />500-1000 man
+            </label>
+            <label>
+              <input data-question name="question4" type="radio" value="0" />300
+              man
+            </label>
+            <label>
+              <input
+                data-question
+                name="question4"
+                type="radio"
+                value="1"
+              />2000 man
+            </label>
+            <a href="bilder/veprik.jpg" target="_blank">
+              <img src="bilder/veprik.jpg" alt="Ryskt kavalleri" />
+            </a>
+          </div>
+          <div id="fraga2" class="invisible">
+            <p>
+              I slaget vid narva år 1700 var de ryska styrkorna ca 80 000 man
+              inklusive medföljande tross. Hur många fler var ryssarna enligt
+              propagandakällorna?
+            </p>
+            <label>
+              <input
+                data-question
+                name="question1"
+                type="radio"
+                value="1"
+                checked
+              />8 mot 1
+            </label>
+            <label>
+              <input data-question name="question1" type="radio" value="0" />3
+              mot 1
+            </label>
+            <label>
+              <input data-question name="question1" type="radio" value="0" />4
+              mot 1
+            </label>
+            <label>
+              <input data-question name="question1" type="radio" value="0" />2
+              mot 1
+            </label>
+            <a href="bilder/narva.jpg" target="_blank">
+              <img src="bilder/narva.jpg" alt="Ryskt infanteri" />
+            </a>
+          </div>
+          <div id="fraga3" class="invisible">
+            <p>
+              I slaget vid Gemauerthof år 1705 stod de ryska styrkorna åter igen
+              överlägsna med upp till 20 000 man mot 7000 svenska trupper.
+              Svenska förlusterna var som mest 2000. Hur stora var de ryska
+              förlusterna?
+            </p>
+            <label>
+              <input
+                data-question
+                name="question2"
+                type="radio"
+                value="0"
+                checked
+              />2000 man
+            </label>
+            <label>
+              <input data-question name="question2" type="radio" value="0" />10
+              000 man
+            </label>
+            <label>
+              <input
+                data-question
+                name="question2"
+                type="radio"
+                value="0"
+              />3000 man
+            </label>
+            <label>
+              <input
+                data-question
+                name="question2"
+                type="radio"
+                value="1"
+              />5000 man
+            </label>
+            <a href="bilder/gemauerthof.jpg" target="_blank">
+              <img src="bilder/gemauerthof.jpg" alt="Ryska pikenerare" />
+            </a>
+          </div>
+        </article>
+      </form>
+      <div class="result invisible">
+        <h2>Du fick <span class="correct-answers">0</span> rätta svar</h2>
+        <button type="button" onclick="resetQuiz()">Försök igen</button>
+      </div>
+    </main>
     <footer><p>© GMS Sweden 2020</p></footer>
   </body>
 </html>
