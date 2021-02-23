@@ -61,19 +61,20 @@ function changeQuestion() {
     document
       .querySelector("#fraga" + nuvarandefraga)
       .classList.toggle("invisible");
+    console.log(nuvarandefraga);
   } else {
     document
       .getElementById("changeQuestion-button")
       .classList.toggle("invisible");
     document.getElementById("submitQuiz-button").classList.toggle("invisible");
-    document
-      .querySelector("#fraga" + nuvarandefraga)
-      .classList.toggle("invisible");
     console.log("inaktiverat");
   }
 }
 
 function submitQuiz() {
+  document
+    .querySelector("#fraga" + nuvarandefraga)
+    .classList.toggle("invisible");
   let points = 0;
 
   let answers = document.querySelectorAll("[data-question]:checked");

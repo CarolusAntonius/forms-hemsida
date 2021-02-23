@@ -43,26 +43,21 @@
 
       <article id="om">
         <p>ABOUT</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magni
+          nemo libero ex cupiditate, non aliquam saepe id, totam voluptatum
+          doloremque sit optio fugit nostrum esse. Deserunt nostrum quasi beatae
+          eaque esse rem omnis aspernatur eius architecto inventore sed
+          assumenda doloribus non vel quia maiores aliquam, dignissimos enim
+          suscipit, delectus illum dolores tempore.
+        </p>
       </article>
 
       <form class="questions">
         <article id="quiz">
           <p>QUIZ</p>
-          <div id="changeQuestion-button">
-            <button type="button" onclick="changeQuestion()">
-              Nästa fråga!
-            </button>
-          </div>
-          <div id="submitQuiz-button" class="invisible">
-            <button type="button" onclick="submitQuiz()">Rätta!</button>
-          </div>
           <div id="fraga1">
-            <p>
-              Stormningen av Veprik resulterade i en svensk seger. De svenska
-              styrkorna var ca 3 000 man medan de ryska styrkorna var ca 1500
-              man. Samtliga ryska trupper dödades eller blev tillfångatagna. Hur
-              många trupper förlorade Sverige?
-            </p>
+            <p>Vilken kung...</p>
             <label>
               <input
                 data-question
@@ -97,11 +92,7 @@
             </a>
           </div>
           <div id="fraga2" class="invisible">
-            <p>
-              I slaget vid narva år 1700 var de ryska styrkorna ca 80 000 man
-              inklusive medföljande tross. Hur många fler var ryssarna enligt
-              propagandakällorna?
-            </p>
+            <p>Vem...</p>
             <label>
               <input
                 data-question
@@ -128,12 +119,7 @@
             </a>
           </div>
           <div id="fraga3" class="invisible">
-            <p>
-              I slaget vid Gemauerthof år 1705 stod de ryska styrkorna åter igen
-              överlägsna med upp till 20 000 man mot 7000 svenska trupper.
-              Svenska förlusterna var som mest 2000. Hur stora var de ryska
-              förlusterna?
-            </p>
+            <p>Hur...</p>
             <label>
               <input
                 data-question
@@ -167,10 +153,34 @@
               <img src="bilder/gemauerthof.jpg" alt="Ryska pikenerare" />
             </a>
           </div>
+          <div id="changeQuestion-button">
+            <button type="button" onclick="changeQuestion()">
+              Nästa fråga!
+            </button>
+          </div>
+          <div id="submitQuiz-button" class="invisible">
+            <button type="button" onclick="submitQuiz()">Rätta!</button>
+          </div>
         </article>
       </form>
       <div class="result invisible">
-        <h2>Du fick <span class="correct-answers">0</span> rätta svar</h2>
+        <p>Du fick <span class="correct-answers">0</span> rätta svar</p>
+        <a href="bilder/gemauerthof.jpg" target="_blank">
+          <img src="bilder/gemauerthof.jpg" alt="Ryska pikenerare" />
+        </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magni
+          nemo libero ex cupiditate, non aliquam saepe id, totam voluptatum
+          doloremque sit optio fugit nostrum esse. Deserunt nostrum quasi beatae
+          eaque esse rem omnis aspernatur eius architecto inventore sed
+          assumenda doloribus non vel quia maiores aliquam, dignissimos enim
+          suscipit, delectus illum dolores tempore. Tempora soluta dignissimos
+          rem tempore qui impedit maiores! Vitae beatae voluptatem repellendus
+          ut! Fugiat perspiciatis aliquid iste quam ea veritatis necessitatibus
+          asperiores placeat esse vero neque quasi quae, odit voluptatibus saepe
+          expedita error ratione consequuntur facere nobis. Ullam voluptatibus
+          consequatur libero, nulla sequi delectus distinctio. Illum, incidunt.
+        </p>
         <button type="button" onclick="resetQuiz()">Försök igen</button>
       </div>
     </main>
