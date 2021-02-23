@@ -101,4 +101,11 @@ function resetQuiz() {
   //Nollställ formuläret:
   document.querySelector(".questions").reset();
   document.querySelector("#fraga1").classList.toggle("invisible");
+
+  //Byt fråga
+  document
+    .getElementById("changeQuestion-button")
+    .classList.toggle("invisible");
+  document.getElementById("submitQuiz-button").classList.toggle("invisible");
+  nuvarandefraga = 1;
 }
