@@ -1,59 +1,48 @@
 @font-face {
   font-family: font;
-  src: url("../font.ttf");
+  src: url(../font.ttf);
   font-display: swap;
 }
-
 * {
   font-family: font;
-  margin: 0px;
+  margin: 0;
   color: #c4ae08;
 }
-
 h1 {
   font-size: max(6vw, 60px);
   text-align: center;
-  -webkit-text-stroke: 1px #000000;
+  -webkit-text-stroke: 1px #000;
 }
-
 h2 {
   font-size: max(2.2vw, 44px);
   text-align: center;
-  -webkit-text-stroke: 1px #000000;
+  -webkit-text-stroke: 1px #000;
 }
-
 h3 {
-  font-size: max(3vw, 43px);
+  font-size: max(3vw, 30px);
   text-align: center;
-  -webkit-text-stroke: 1px #000000;
-  padding-bottom: 1, 5em;
+  -webkit-text-stroke: 1px #000;
 }
-
 p {
   font-size: max(2vw, 30px);
   text-align: center;
   font-family: serif;
-  -webkit-text-stroke: 0.5px #000000;
+  -webkit-text-stroke: 0.5px #000;
 }
-
 a {
   font-size: max(3vw, 10px);
   text-decoration: none;
-  -webkit-text-stroke: 1px #000000;
+  -webkit-text-stroke: 1px #000;
 }
-
-img:hover {
+img:hover, button:hover {
   transform: scale(1.05);
-  box-shadow: 10px -10px 10px rgba(196, 174, 8, 0.3);
   transition: 0.2s ease-in-out;
 }
 header nav {
-  /*HUR CENTRERAR JAG nav-ELEMENTET INUTI NAVEN */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 main {
   padding-top: 2em;
   padding-bottom: 2em;
@@ -63,32 +52,28 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 header {
   padding: 1.5vw;
   border: solid#c4ae08 5px;
-  background-image: url("../bilder/konungens-likfard-2.jpg");
+  background-image: url(../bilder/konungens-likfard-2.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 footer {
   padding: 2em;
-  background-color: rgb(1, 16, 48);
+  background-color: #011030;
   border: solid#c4ae08 5px;
-  background-image: url("../bilder/konungens-likfard-2.jpg");
+  background-image: url(../bilder/konungens-likfard-2.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-#quiz p,
 #om p,
+#quiz p,
 .result p {
   padding-bottom: 1.5vw;
 }
-
 img {
   display: block;
   margin-left: auto;
@@ -96,72 +81,59 @@ img {
   width: 50%;
   height: auto;
   padding-bottom: 1.5vw;
-  min-width: 150px;
 }
-
-#quiz,
 #om,
+#quiz,
 .result {
   margin-top: 3em;
   margin: 1vw;
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
   font-size: max(1.5vw, 25px);
   min-width: 150px;
   border: solid#c4ae08 5px;
   padding: 1.5em;
   background-image: url("../bilder/sten-2 (2).jpg");
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  /*display: none; standard är att man inte visar frågorna*/
+  background-position: center;
+  background-size: cover;
 }
-
 label,
 nav {
   margin-top: 1rem;
-  margin-bottom: 1rem;
-
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 1rem;
 }
-
 nav {
   margin: 10px;
   display: inline;
   margin: 0;
   padding: 0;
 }
-
 nav input[type="radio"] {
   opacity: 0;
   position: fixed;
   width: 0;
 }
-
-nav label:hover,
 #changeQuestion-button button:hover,
 #submitQuiz-button button:hover,
-.result button:hover {
-  background-color: #b9b9b9;
+.result button:hover,
+nav label:hover {
+  background-color: #c9c7c7;
 }
-
-input[type="radio"]:checked + label {
-  /*FIXAAAAAAAAAAAAAA*/
-  background-color: #ff0000;
+nav input[type="radio"]:checked + label {
+  background-color: #d1d1d1;
   border-color: #c4ae08;
 }
-
 button {
   margin-top: 1.5rem;
   text-align: center;
   text-decoration: none;
 }
-
-nav label,
 #changeQuestion-button button,
 #submitQuiz-button button,
-.result button {
+.result button,
+nav label {
   display: inline-block;
   background-color: #ddd;
   padding: 10px 20px;
@@ -169,15 +141,13 @@ nav label,
   border: 2px solid #444;
   border-radius: 4px;
 }
-
 #changeQuestion-button,
-#submitQuiz-button,
-#resetQuiz-button {
+#resetQuiz-button,
+#submitQuiz-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .invisible {
-  display: none !important; /* ändra??*/
+  display: none !important;
 }
