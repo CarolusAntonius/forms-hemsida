@@ -37,7 +37,7 @@
     </header>
     <main>
       <article id="om">
-        <p>Om</p>
+        <h2>Om</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
           commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -51,27 +51,23 @@
         <article id="quiz">
           <h2>Quiz</h2>
           <div id="fraga1">
-            <p>Vilket år genomfördes stormningen av Veprik</p>
+            <p>Vilken sida vid segrade vid stormningen av Veprik?</p>
+            <label>
+              <input
+                data-question
+                name="question4"
+                type="radio"
+                value="1"
+                checked
+              />Sverige
+            </label>
             <label>
               <input
                 data-question
                 name="question4"
                 type="radio"
                 value="0"
-                checked
-              />År 1703
-            </label>
-            <label>
-              <input data-question name="question4" type="radio" value="0" />År
-              1704
-            </label>
-            <label>
-              <input data-question name="question4" type="radio" value="0" />År
-              1710
-            </label>
-            <label>
-              <input data-question name="question4" type="radio" value="1" />År
-              1709
+              />Ryssland
             </label>
             <a href="bilder/veprik.jpg" target="_blank">
               <img
@@ -81,7 +77,7 @@
             </a>
           </div>
           <div id="fraga2" class="invisible">
-            <p>Vilket år utkämpades Slaget Vid Narva?</p>
+            <p>Hur gammal var den svenska Konungen under Slaget vid Narva?</p>
             <label>
               <input
                 data-question
@@ -89,19 +85,19 @@
                 type="radio"
                 value="1"
                 checked
-              />År 1700
+              />18 år
             </label>
             <label>
               <input data-question name="question1" type="radio" value="0" />
-              År 1699
+              15 år
             </label>
             <label>
               <input data-question name="question1" type="radio" value="0" />
-              År 1718
+              12 år
             </label>
             <label>
               <input data-question name="question1" type="radio" value="0" />
-              År 1521
+              22 år
             </label>
             <a href="bilder/narva.jpg" target="_blank">
               <img src="bilder/narva.jpg" alt="Bild på Slaget Vid Narva" />
@@ -155,7 +151,7 @@
             alt="Bild på Slaget vid Gemauerthof"
           />
         </a>
-        <p>Detta innebär att du är en <span class="niva">0</span></p>
+        <p>Du tilldelas graden <span class="niva">0</span></p>
         <div id="resetQuiz-button">
           <button type="button" onclick="resetQuiz()">Försök igen</button>
         </div>

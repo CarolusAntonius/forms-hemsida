@@ -101,7 +101,7 @@ function submitQuiz() {
   } else if (points == 1) {
     niva = "Underofficer";
   } else {
-    niva = "gemen soldat";
+    niva = "Menig soldat";
   }
 
   // Lägg in poängen i vår "correct-answers" span:
@@ -114,6 +114,8 @@ function submitQuiz() {
 
   //göm headern
   document.querySelector("header").classList.toggle("invisible");
+  //göm footern
+  document.querySelector("footer").classList.toggle("invisible");
 }
 
 function resetQuiz() {
@@ -131,4 +133,9 @@ function resetQuiz() {
     .classList.toggle("invisible");
   document.getElementById("submitQuiz-button").classList.toggle("invisible");
   nuvarandefraga = 1;
+
+  //visa headern
+  document.querySelector("header").classList.toggle("invisible");
+  //visa footern
+  document.querySelector("footer").classList.toggle("invisible");
 }
