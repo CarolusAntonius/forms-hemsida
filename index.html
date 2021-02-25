@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,34 +8,31 @@
     <title>Forms projekt</title>
   </head>
 
-  <body id="trupperbody">
+  <body>
     <header>
       <h1>Greatest battles of Carolus XII</h1>
       <nav>
-        <ul>
-          <li>
-            <input
-              id="om-lank"
-              type="radio"
-              name="meny"
-              value="om"
-              checked
-              onchange="update()"
-            />
-            <label for="om-lank">Om</label>
-          </li>
-          <li>
-            <input
-              id="quiz-lank"
-              type="radio"
-              name="meny"
-              value="quiz"
-              checked
-              onchange="update()"
-            />
-            <label for="quiz-lank">Quiz</label>
-          </li>
-        </ul>
+        <label
+          >Om
+          <input
+            type="radio"
+            name="meny"
+            value="om"
+            checked
+            onchange="update()"
+          />
+        </label>
+
+        <label
+          >Quiz
+          <input
+            type="radio"
+            name="meny"
+            value="quiz"
+            checked
+            onchange="update()"
+          />
+        </label>
       </nav>
     </header>
     <main>
@@ -46,9 +43,7 @@
           commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Sequi.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
         <img src="bilder/Underskrift.png" alt="Underskrift av Karl XII" />
       </article>
 
@@ -154,13 +149,16 @@
       </form>
       <div class="result invisible">
         <p>Du fick <span class="correct-answers">0</span> rätta svar</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magni
-          nemo libero ex cupiditate, non aliquam saepe id, totam voluptatum
-          doloremque sit optio fugit nostrum esse. Deserunt nostrum quasi beatae
-          eaque esse rem omnis aspernatur eius architecto inventore sed.
-        </p>
-        <button type="button" onclick="resetQuiz()">Försök igen</button>
+        <a href="bilder/gemauerthof.jpg" target="_blank">
+          <img
+            src="bilder/gemauerthof.jpg"
+            alt="Bild på Slaget vid Gemauerthof"
+          />
+        </a>
+        <p>Detta innebär att du är en <span class="niva">0</span></p>
+        <div id="resetQuiz-button">
+          <button type="button" onclick="resetQuiz()">Försök igen</button>
+        </div>
       </div>
     </main>
     <footer><p>© GMS Sweden 2020</p></footer>

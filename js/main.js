@@ -53,7 +53,7 @@ function update() {
 let nuvarandefraga = 1;
 
 function changeQuestion() {
-  if (nuvarandefraga < 3) {
+  if (nuvarandefraga < 2) {
     document
       .querySelector("#fraga" + nuvarandefraga)
       .classList.toggle("invisible");
@@ -61,15 +61,22 @@ function changeQuestion() {
     document
       .querySelector("#fraga" + nuvarandefraga)
       .classList.toggle("invisible");
-    console.log(nuvarandefraga);
   } else {
+    document
+      .querySelector("#fraga" + nuvarandefraga)
+      .classList.toggle("invisible");
+    nuvarandefraga += 1;
+    document
+      .querySelector("#fraga" + nuvarandefraga)
+      .classList.toggle("invisible");
     document
       .getElementById("changeQuestion-button")
       .classList.toggle("invisible");
     document.getElementById("submitQuiz-button").classList.toggle("invisible");
-    console.log("inaktiverat");
   }
 }
+
+//GÅR INTE ATT GÖRA SEPARAT FUNKTION MED nextQuestion() eftersom nuvarande fråga i så fall måste returneras till changeQuestion
 
 function submitQuiz() {
   document
@@ -85,12 +92,28 @@ function submitQuiz() {
     points += parseInt(answers[index].value);
   }
 
+  let niva;
+
+  if (points == 3) {
+    niva = "General";
+  } else if (points == 2) {
+    niva = "Officerare";
+  } else if (points == 1) {
+    niva = "Underofficer";
+  } else {
+    niva = "gemen soldat";
+  }
+
   // Lägg in poängen i vår "correct-answers" span:
   document.querySelector(".correct-answers").innerHTML = points;
+  document.querySelector(".niva").innerHTML = niva;
 
   //Göm frågorna och visa resultatet: !!!!!!!!!!!!!!!!
   document.querySelector(".questions").classList.toggle("invisible");
   document.querySelector(".result").classList.toggle("invisible");
+
+  //göm headern
+  document.querySelector("header").classList.toggle("invisible");
 }
 
 function resetQuiz() {
