@@ -34,10 +34,16 @@ a {
   text-decoration: none;
   -webkit-text-stroke: 1px #000;
 }
-img:hover, button:hover {
+img:hover,
+button:hover {
   transform: scale(1.05);
   transition: 0.2s ease-in-out;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 header nav {
   display: flex;
   align-items: center;
