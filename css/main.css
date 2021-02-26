@@ -35,12 +35,14 @@ a {
   -webkit-text-stroke: 1px #000;
 }
 img:hover,
-button:hover {
+button:hover,
+nav label:hover {
   transform: scale(1.05);
   transition: 0.2s ease-in-out;
 }
 
-button:hover {
+button:hover,
+nav label:hover {
   cursor: pointer;
 }
 
@@ -127,10 +129,12 @@ nav input[type="radio"] {
 nav label:hover {
   background-color: #c9c7c7;
 }
+/*
 nav input[type="radio"]:checked + label {
-  background-color: #d1d1d1;
-  border-color: #c4ae08;
+  background-color: black;
+  border-color: black;
 }
+*/
 button {
   margin-top: 1.5rem;
   text-align: center;
